@@ -10,6 +10,11 @@ const initialValues = {
   channel: "",
   comments: "",
   address: "",
+  socialLinks: {
+    fb: "",
+    twitter: "",
+  },
+  phoneNumbers: ["", ""],
 };
 const onSubmit = (values) => {
   /* Real world App's API call takes place here */
@@ -73,6 +78,22 @@ const NewYoutubeForm = () => {
               );
             }}
           </Field>
+        </div>
+        <div className="form-control">
+          <label htmlFor="fb">Facebook</label>
+          <Field type="text" id="fb" name="socialLinks.fb" />
+        </div>
+        <div className="form-control">
+          <label htmlFor="twitter">Twitter</label>
+          <Field type="text" id="twitter" name="socialLinks.twitter" />
+        </div>
+        <div className="form-control">
+          <label htmlFor="primary-mobile">Primary Mobile</label>
+          <Field type="text" id="primary-mobile" name="phoneNumbers[0]" />
+        </div>
+        <div className="form-control">
+          <label htmlFor="secondary-mobile">Secondary Mobile</label>
+          <Field type="text" id="secondary-mobile" name="phoneNumbers[1]" />
         </div>
         <button type="submit">Submit</button>
       </Form>

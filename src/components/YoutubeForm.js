@@ -12,23 +12,23 @@ const onSubmit = (values) => {
   /* Real world App's API call takes place here */
   console.log("Form Data onSubmit : ", values);
 };
-const validate = (values) => {
-  let errors = {};
-  if (!values.name) {
-    errors.name = "Name Required";
-  }
-  if (!values.email) {
-    errors.email = "Email Required";
-  } else if (
-    !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(values.email)
-  ) {
-    errors.email = "Invalid Email format";
-  }
-  if (!values.channel) {
-    errors.channel = "Channel Required";
-  }
-  return errors;
-};
+// const validate = (values) => {
+//   let errors = {};
+//   if (!values.name) {
+//     errors.name = "Name Required";
+//   }
+//   if (!values.email) {
+//     errors.email = "Email Required";
+//   } else if (
+//     !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(values.email)
+//   ) {
+//     errors.email = "Invalid Email format";
+//   }
+//   if (!values.channel) {
+//     errors.channel = "Channel Required";
+//   }
+//   return errors;
+// };
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Name Required Y"),
