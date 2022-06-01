@@ -31,6 +31,14 @@ const validationSchema = Yup.object({
   address: Yup.string().required("Address Required Y"),
 });
 
+const validateComments = (value) => {
+  let error;
+  if (!value) {
+    error = "Comments Required";
+  }
+  return error;
+};
+
 const NewYoutubeForm = () => {
   //   console.log("Visited Fields:", formik.touched);
   return (
@@ -38,6 +46,8 @@ const NewYoutubeForm = () => {
       initialValues={initialValues}
       onSubmit={onSubmit}
       // validationSchema={validationSchema}
+      // validateOnBlur={false}  //To avoid validation on any form field blur
+      // validateOnChange={false} //To avoid validation onChange
     >
       <Form>
         {/* <div className="form-control">
@@ -56,14 +66,20 @@ const NewYoutubeForm = () => {
           <label htmlFor="channel">Channel</label>
           <Field type="text" id="channel" name="channel" />
           <ErrorMessage name="channel" component={StyledError} />
-        </div>
+        </div> */}
 
         <div className="form-control">
           <label htmlFor="comments">Comments</label>
-          <Field as="textarea" id="comments" name="comments" />
+          <Field
+            as="textarea"
+            id="comments"
+            name="comments"
+            validate={validateComments}
+          />
+          <ErrorMessage name="comments" component={StyledError} />
         </div>
 
-        <div className="form-control">
+        {/* <div className="form-control">
           <label htmlFor="address">Address</label>
           <Field name="address">
             {(props) => {
@@ -96,7 +112,7 @@ const NewYoutubeForm = () => {
           <label htmlFor="secondary-mobile">Secondary Mobile</label>
           <Field type="text" id="secondary-mobile" name="phoneNumbers[1]" />
         </div> */}
-        <div className="form-control">
+        {/* <div className="form-control">
           <label htmlFor="phNumbers">Phone Numbers</label>
           <FieldArray id="phNumbers" name="phNumbers">
             {(fieldArrayProps) => {
@@ -123,7 +139,7 @@ const NewYoutubeForm = () => {
               );
             }}
           </FieldArray>
-        </div>
+        </div> */}
         <button type="submit">Submit</button>
       </Form>
     </Formik>
