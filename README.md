@@ -9,4 +9,4 @@
 
 2. `<Outlet />` from the **react-router-dom** used to render the nested routes.
 
-3. Nested routes contents (JSX) are rendring in the place of outlet. All other components in the Parent route is shared across the nested route. Here `Navbar` in the `Home` page is shared across it's nested routes
+3. We have fixed parent route only content (JSX only render in parent route) by adding **index** route inside parent route
