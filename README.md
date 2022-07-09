@@ -3,6 +3,6 @@
 1. `npm install`
 2. `npm start`
 
-#### URL params were done.(Dynamic routing)
+#### Navigation were done
 
-1. We can access the URL parameters using `useParams` hook
+1. We can access the URL parameters using `useNavigate` hook
