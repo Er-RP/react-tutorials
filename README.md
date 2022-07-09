@@ -3,10 +3,13 @@
 1. `npm install`
 2. `npm start`
 
-#### Nested Routing were done.
+#### Active Route were done.
 
-1. in `App.js` nested routes are wrapped inside parent route
+1. We can easily achieve active link styles using `NavLink` component from **react-router-dom**
+   and `isActive` prop.
 
-2. `<Outlet />` from the **react-router-dom** used to render the nested routes.
+2. `NavLink` component will be automatically apply _active_ class to current route. e.g **Home**
 
-3. We have fixed parent route only content (JSX only render in parent route) by adding **index** route inside parent route
+3. We can also set custom style in inline using the `isActive` prop. e.g **About**
+
+4. Also we can apply custom class using the `isActive` prop. e.g **Products**

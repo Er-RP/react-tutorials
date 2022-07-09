@@ -275,13 +275,18 @@ ul {
   display: flex;
   gap: 1rem;
 }
-
+a {
+  color: var(--grey-500);
+}
 .link {
   color: var(--grey-500);
 }
 
 .active {
-  color: var(--primary-500);
+  color: greenyellow;
+}
+.active2 {
+  text-decoration: underline;
 }
 .products article {
   margin-bottom: 1rem;
