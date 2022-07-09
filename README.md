@@ -3,6 +3,6 @@
 1. `npm install`
 2. `npm start`
 
-#### Navigation were done
+#### Protected Route were done
 
-1. We can access the URL parameters using `useNavigate` hook
+1. `Navigate` component used here
