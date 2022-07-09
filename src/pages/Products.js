@@ -5,7 +5,6 @@ const Products = () => {
   const [productId, setProductId] = useState("1001");
   return (
     <section className="section">
-      <h2>Products Page</h2>
       <label htmlFor="productid">Product ID</label>
       <input
         id="productid"

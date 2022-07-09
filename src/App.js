@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import SharedLayout from "./layouts/SharedLayout";
+import SharedProductLayout from "./layouts/SharedProductLayout";
 import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import Error from "./pages/Error";
@@ -17,8 +18,10 @@ const App = () => {
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="products" element={<Products />} />
-        <Route path="products/:productId" element={<SingleProduct />} />
+        <Route path="products" element={<SharedProductLayout />}>
+          <Route index element={<Products />} />
+          <Route path=":productId" element={<SingleProduct />} />
+        </Route>
         <Route path="login" element={<Login setUser={setUser} />} />
         <Route
           path="dashboard"
