@@ -2,7 +2,7 @@ import Button from "./Button";
 
 //Adding Default export
 export default {
-  title: "Button", //mandatory and unique , It will be shown in left side navigation panel of storybook
+  title: "Group1/Button", //mandatory and unique , It will be shown in left side navigation panel of storybook
   component: Button, //Optional ,But highly recommended
 };
 

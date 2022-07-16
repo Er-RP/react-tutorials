@@ -4,12 +4,12 @@ import Input from "./components/Input/Input";
 export const StoryBookItems = [
   {
     title: "Button",
-    url: "/button",
+    url: "/group1-button",
     component: <Button>Button</Button>,
   },
   {
     title: "Input",
-    url: "/input",
+    url: "/group1-input",
     component: <Input size="small" />,
   },
 ];

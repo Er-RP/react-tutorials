@@ -1,7 +1,7 @@
 import Input from "./Input";
 
 export default {
-  title: "Input",
+  title: "Group1/Input",
   componet: Input,
 };
 
