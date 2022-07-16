@@ -12,4 +12,9 @@ export const StoryBookItems = [
     url: "/group1-input",
     component: <Input size="small" />,
   },
+  {
+    title: "NestedStory",
+    url: "/group1-SimpleForm",
+    component: <Button>Nested story</Button>,
+  },
 ];
