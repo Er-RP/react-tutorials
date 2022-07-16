@@ -17,4 +17,9 @@ export const StoryBookItems = [
     url: "/group1-SimpleForm",
     component: <Button>Nested story</Button>,
   },
+  {
+    title: "With Decorator",
+    url: "/chakra-button",
+    component: <Button>Decorator</Button>,
+  },
 ];
