@@ -1,0 +1,27 @@
+.ip {
+  display: block;
+  width: 400px;
+  padding: 0 1rem;
+  border: 2px solid;
+  border-color: inherit;
+  background-color: White;
+  text-decoration: none;
+}
+
+.small {
+  height: 2rem;
+  font-size: 0.85rem;
+}
+.medium {
+  height: 3rem;
+  font-size: 1rem;
+}
+.large {
+  height: 4rem;
+  font-size: 1.15rem;
+}
+::-moz-input-placeholder,
+::-webkit-input-placeholder {
+  text-decoration: none;
+  border-bottom: 0px solid transparent;
+}
