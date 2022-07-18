@@ -4,6 +4,4 @@
 npm run storybook
 ```
 
-## Add-on [ `Control` ]
-
-1. To use the Controls addon, write stories using `args`.
+## Add-on [ `Actions` ]
