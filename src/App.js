@@ -1,14 +1,30 @@
 import { useState } from "react";
 import "./App.css";
 
+const sampleCallback = () => {
+  console.log("Render on each rerender");
+  return 0;
+};
+
 const App = () => {
-  /* Initializing useState . useState always return array which is combination of  currentState [count],
-  function [setCount] to change currentState . useState accepts one initialValue [0]*/
-  const [count, setCount] = useState(0);
+  /* useState with slow computation .  we can also set initial value using the callback function.
+  and initalValue doesn't calculate for each rerendering.*/
+
+  //Render Once
+  const [count, setCount] = useState(() => {
+    console.log("Only render once on page load");
+    return 0;
+  });
+
+  //Render Once
+  // const [count, setCount] = useState(sampleCallback);
+
+  //Render many-times
+  // const [count, setCount] = useState(sampleCallback());
+
   //Function to change state
   const handleIncreaseCount = () => setCount((prevCount) => prevCount + 1);
   const handleDecreaseCount = () => setCount((prevCount) => prevCount - 1);
-
   return (
     <>
       <div className="App">

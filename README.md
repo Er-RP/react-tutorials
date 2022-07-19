@@ -8,4 +8,4 @@
 
 1. useState used to manage the state
 
-2. Simple _useState_ hook with _counter_ logic
+2. _useState_ hook with _callback as initialState_ logic
