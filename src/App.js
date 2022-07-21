@@ -1,36 +1,60 @@
 import { useState } from "react";
 import "./App.css";
 
-const sampleCallback = () => {
-  console.log("Render on each rerender");
-  return 0;
-};
-
 const App = () => {
-  /* useState with slow computation .  we can also set initial value using the callback function.
-  and initalValue doesn't calculate for each rerendering.*/
+  /* useState with object and array */
 
-  //Render Once
-  const [count, setCount] = useState(() => {
-    console.log("Only render once on page load");
-    return 0;
+  const [simpleObject, setSimpleObject] = useState({ id: 1, name: "RP" });
+  const [nestedObject, setNestedObject] = useState({
+    id: 1,
+    name: "RP",
+    info: {
+      age: 25,
+      job: "none",
+    },
   });
-
-  //Render Once
-  // const [count, setCount] = useState(sampleCallback);
-
-  //Render many-times
-  // const [count, setCount] = useState(sampleCallback());
+  const [simpleArray, setSimpleArray] = useState([1, 2, 3, 4]);
 
   //Function to change state
-  const handleIncreaseCount = () => setCount((prevCount) => prevCount + 1);
-  const handleDecreaseCount = () => setCount((prevCount) => prevCount - 1);
+  const handleSimpleObject = () =>
+    setSimpleObject((prevState) => ({ ...prevState, name: "Robiooo" }));
+  const handleNestedObject = () =>
+    setNestedObject((prevState) => ({
+      ...prevState,
+      info: {
+        ...prevState.info,
+        job: "Developer",
+      },
+    }));
+  const handleSimpleArray = () =>
+    setSimpleArray((prevState) => [...prevState, 4, 5, 6]);
   return (
     <>
-      <div className="App">
-        <button onClick={() => handleIncreaseCount()}>+</button>
-        <p>{count}</p>
-        <button onClick={() => handleDecreaseCount()}>-</button>
+      <div
+        className="App"
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          margin: 40,
+          gap: 60,
+        }}
+      >
+        <button onClick={() => handleSimpleObject()}>Simple Object</button>
+        <button onClick={() => handleNestedObject()}>Nested Object</button>
+        <button onClick={() => handleSimpleArray()}>simple Array</button>
+      </div>
+      <div
+        className="App"
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          margin: 40,
+          gap: 60,
+        }}
+      >
+        <div>Simple Object:{JSON.stringify(simpleObject)}</div>
+        <div>Nested Object:{JSON.stringify(nestedObject)}</div>
+        <div>Simple Array:{JSON.stringify(simpleArray)}</div>
       </div>
     </>
   );
