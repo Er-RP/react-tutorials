@@ -1,0 +1,8 @@
+/*
+Element selector used for styling elements.
+We just need mention the element name. for example, 'div' or 'p'.
+*/
+
+li {
+  background-color: red;
+}

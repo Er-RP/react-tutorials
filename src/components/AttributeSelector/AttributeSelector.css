@@ -1,0 +1,34 @@
+/*
+
+*/
+/*
+Attribute selector used to style the elements on which specific attributes are available.
+Here we are applying style for elements which are having atrribute 'title'.
+*/
+
+[title] {
+  color: red;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/*
+Atrribute selector with Element.
+Here we are applying style for all the 'span' elements which are having atrribute 'title'.
+*/
+
+span[title] {
+  color: green;
+  display: block;
+  margin: 5px 0px;
+}
+
+/*
+Atrribute selector with Class.
+Here we are applying style for all the  elements which are having class 'attributeSelectorClass' and atrribute 'attribute-with-class'.
+*/
+
+.attributeSelectorClass[attribute-with-class] {
+  background-color: #31012f;
+  color: #e3ecf5;
+}

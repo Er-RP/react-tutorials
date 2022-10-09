@@ -1,0 +1,16 @@
+/*
+We are using classnames here for Styling.
+ClassNames are mentioned by adding '.' (dot) before class names.
+*/
+.class1 {
+  background-color: #acc8e5;
+  color: #112a46;
+  font-size: 20px;
+  margin: 5px 0px;
+}
+.class2 {
+  background-color: #31012f;
+  color: #e3ecf5;
+  font-size: 18px;
+  margin: 5px 0px;
+}

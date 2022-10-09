@@ -1,0 +1,11 @@
+/*
+Id selector used for styling here.
+We can style specific element with specific 'id' by adding '#' befor id of that element.
+*/
+
+#idselector {
+  background-color: blue;
+  color: azure;
+  padding: 2px;
+  margin: 5px 0px;
+}

@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import AttributeSelector from "./components/AttributeSelector";
+import ClassSelector from "./components/ClassSelector";
+import ElementSelector from "./components/ElementSelector";
+import IdSelector from "./components/IdSelector";
 
-function App() {
+const SELECTOR_ARRAY = ["Class", "Elemet", "Id", "Attribute"];
+
+const RENDER_ITEM = {
+  Class: <ClassSelector />,
+  Elemet: <ElementSelector />,
+  Id: <IdSelector />,
+  Attribute: <AttributeSelector />,
+  Default: <ClassSelector />,
+};
+const App = () => {
+  const [demo, setDemo] = useState("Class");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app_wrapper">
+      <div className="wrapper_top">
+        <p className="title">Css Selectors</p>
+        <div className="selector_wrapper">
+          {SELECTOR_ARRAY.map((sel, i) => (
+            <div
+              className={`selector--item ${
+                demo === sel && "selector--item__active"
+              }`}
+              key={i}
+              onClick={() => setDemo(sel)}
+            >
+              {sel}
+            </div>
+          ))}
+        </div>
+      </div>
+      <br />
+      <div className="wrapper_bottom">
+        {RENDER_ITEM[demo] || RENDER_ITEM["Default"]}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
