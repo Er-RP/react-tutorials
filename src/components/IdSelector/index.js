@@ -3,7 +3,7 @@ import "./IdSelector.css";
 const IdSelector = () => {
   return (
     <>
-      <p className="title">Id Selector</p>
+      <p className="title title--left">Id Selector</p>
       <div id="idselector">
         Id should be unique. By using this id we can modify style of element
       </div>

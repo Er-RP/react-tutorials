@@ -1,6 +1,6 @@
 .app_wrapper {
-  margin: 20px 40px;
-  padding: 10px 20px;
+  /* margin: 10px 40px;
+  padding: 5px 20px; */
   box-sizing: border-box;
 }
 .title {
@@ -10,7 +10,11 @@
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: 700;
-  margin: 15px 0px;
+  margin: 10px 0px;
+  color: rgb(175, 1, 255);
+}
+.title--left {
+  text-align: left;
 }
 .wrapper_top,
 .wrapper_bottom {
@@ -31,4 +35,12 @@
 .selector--item__active {
   background-color: #360003;
   color: #ffffff;
+}
+.about_css_con {
+  margin: 5px 60px;
+  background: antiquewhite;
+  /* color: indigo; */
+  padding: 5px 10px;
+  border: 1px solid indigo;
+  border-radius: 20px;
 }

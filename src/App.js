@@ -1,42 +1,36 @@
 import { useState } from "react";
 import "./App.css";
-import AttributeSelector from "./components/AttributeSelector";
-import ClassSelector from "./components/ClassSelector";
-import ElementSelector from "./components/ElementSelector";
-import IdSelector from "./components/IdSelector";
+import CssSelectors from "./Pages/CSS_Selectors";
 
-const SELECTOR_ARRAY = ["Class", "Elemet", "Id", "Attribute"];
+const SELECTOR_ARRAY = ["Selector"];
 
-const RENDER_ITEM = {
-  Class: <ClassSelector />,
-  Elemet: <ElementSelector />,
-  Id: <IdSelector />,
-  Attribute: <AttributeSelector />,
-  Default: <ClassSelector />,
+const RENDER_PAGE = {
+  Selector: <CssSelectors />,
+  Default: <CssSelectors />,
 };
 const App = () => {
-  const [demo, setDemo] = useState("Class");
+  const [page, setPage] = useState("Selector");
   return (
-    <div className="app_wrapper">
+    <div class>
       <div className="wrapper_top">
-        <p className="title">Css Selectors</p>
+        <p className="title title--left">CSS Pages</p>
         <div className="selector_wrapper">
           {SELECTOR_ARRAY.map((sel, i) => (
             <div
               className={`selector--item ${
-                demo === sel && "selector--item__active"
+                page === sel && "selector--item__active"
               }`}
               key={i}
-              onClick={() => setDemo(sel)}
+              onClick={() => setPage(sel)}
             >
               {sel}
             </div>
           ))}
         </div>
       </div>
-      <br />
+      {/* <br /> */}
       <div className="wrapper_bottom">
-        {RENDER_ITEM[demo] || RENDER_ITEM["Default"]}
+        {RENDER_PAGE[page] || RENDER_PAGE["Default"]}
       </div>
     </div>
   );

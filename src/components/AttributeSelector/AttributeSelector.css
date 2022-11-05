@@ -32,3 +32,15 @@ Here we are applying style for all the  elements which are having class 'attribu
   background-color: #31012f;
   color: #e3ecf5;
 }
+
+/*
+Atrribute selector with exact value.
+Here we are applying style for all the  elements which are having  atrribute 'data-attr' and attribute value 'true
+*/
+
+[data-attr="true"] {
+  color: aliceblue;
+  background-color: rgb(43, 84, 1);
+  padding: 4px;
+  border-radius: 2px;
+}
