@@ -22,11 +22,23 @@ export const counterSlice = createSlice({
     reset: (state) => {
       state.count = 0;
     },
+    incrementByAmount: (state, action) => {
+      state.count += action.payload;
+    },
+    dynamicAction: (state, action) => {
+      const DA = {
+        inc: state.count + action.payload.amount,
+        dec: state.count - action.payload.amount,
+        default: 0,
+      };
+      state.count = DA[action.payload.operation] || DA["default"];
+    },
   },
 });
 
 /* actions */
-export const { increment, decrement, reset } = counterSlice.actions;
+export const { increment, decrement, reset, incrementByAmount, dynamicAction } =
+  counterSlice.actions;
 
 /* reducers */
 
