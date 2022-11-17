@@ -1,19 +1,25 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import { routes } from "./routes";
 import Counter from "./features/counter/Counter";
+import PostsList from "./features/posts/PostsList";
 
 function App() {
   return (
     <div>
       <div className="route_container">
         {routes.map((r, i) => (
-          <Link to={r?.href} key={i}>
+          <NavLink
+            to={r?.href}
+            key={i}
+            style={({ isActive }) => ({ opacity: isActive && 1 })}
+          >
             {r?.name}
-          </Link>
+          </NavLink>
         ))}
       </div>
       <Routes>
-        <Route path="/" element={<Counter />} />
+        <Route path="/" element={<Counter title="counter" />} />
+        <Route path="/posts" element={<PostsList />} />
       </Routes>
     </div>
   );

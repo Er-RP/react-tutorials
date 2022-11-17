@@ -15,9 +15,32 @@
   border-radius: 4px;
   background-color: blueviolet;
   color: white;
+  opacity: 0.7;
 }
 .app_title {
   color: blueviolet;
   text-align: center;
   font-size: 2.2rem;
+}
+.post_con {
+  border: 2px solid violet;
+  margin: 15px 0px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  position: relative;
+}
+.primary_button {
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.remove_button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 48%;
+  background-color: red;
+  padding: 2px 5px;
+  font-size: 16px;
+  cursor: pointer;
 }

@@ -11,7 +11,7 @@ import {
   incrementByAmount,
   dynamicAction,
 } from "./counterSlice";
-const Counter = () => {
+const Counter = ({ title }) => {
   const count = useSelector((state) => state.counter.count);
   const dispatch = useDispatch();
   const [incAmount, setIncAmount] = useState(2);
