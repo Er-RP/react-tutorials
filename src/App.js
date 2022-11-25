@@ -2,6 +2,7 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import { routes } from "./routes";
 import Counter from "./features/counter/Counter";
 import PostsList from "./features/posts/PostsList";
+import UsersList from "./features/users/UsersList";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Counter title="counter" />} />
+        <Route path="/users" element={<UsersList />} />
         <Route path="/posts" element={<PostsList />} />
       </Routes>
     </div>

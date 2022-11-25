@@ -22,12 +22,13 @@ export const postsSlice = createSlice({
         state.posts.push(action?.payload);
       },
       //Preparing data (Payload)
-      prepare(title, content) {
+      prepare(title, content, user) {
         return {
           payload: {
             id: nanoid(),
             title,
             content,
+            user,
           },
         };
       },

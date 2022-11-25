@@ -4,6 +4,10 @@ export const routes = [
     href: "/",
   },
   {
+    name: "Users",
+    href: "/users",
+  },
+  {
     name: "Posts",
     href: "/posts",
   },
