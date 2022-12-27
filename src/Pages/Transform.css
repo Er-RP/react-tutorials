@@ -1,0 +1,12 @@
+.basediv {
+  background-color: rgb(241, 137, 26);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  height: 200px;
+  width: 200px;
+  margin: 10px auto;
+}

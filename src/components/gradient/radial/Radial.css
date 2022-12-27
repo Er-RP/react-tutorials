@@ -1,0 +1,44 @@
+/*
+Syntax
+background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+By default, shape is ellipse, size is farthest-corner, and position is center.
+*/
+
+/*Common style for 'Radial' gradient*/
+.radial {
+  width: 100%;
+  height: 120px;
+  padding: 5px;
+  margin: 15px;
+  --color1: rgb(207, 222, 121);
+  --color2: rgb(244, 68, 68);
+  --color3: rgb(96, 127, 253);
+}
+
+/*Default Radial gradient*/
+#default {
+  background-image: radial-gradient(
+    var(--color1),
+    var(--color2),
+    var(--color3)
+  );
+}
+
+/*Differently Spaced Color Stops*/
+#color_stops {
+  background-image: radial-gradient(
+    var(--color1) 50%,
+    var(--color2) 60%,
+    var(--color3) 90%
+  );
+}
+
+/*Changing Radial radient shape*/
+#circle {
+  background-image: radial-gradient(
+    circle,
+    var(--color1) 50%,
+    var(--color2) 60%,
+    var(--color3) 90%
+  );
+}

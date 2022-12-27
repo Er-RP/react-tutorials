@@ -1,20 +1,18 @@
 import { useState } from "react";
-import AttributeSelector from "../components/selectors/AttributeSelector";
-import ClassSelector from "../components/selectors/ClassSelector";
-import ElementSelector from "../components/selectors/ElementSelector";
-import IdSelector from "../components/selectors/IdSelector";
+import Rotate from "../components/transforms/rotate";
+import Scale from "../components/transforms/scale";
+import "./Transform.css";
 
-const SELECTOR_ARRAY = ["Class", "Elemet", "Id", "Attribute"];
-
+const SELECTOR_ARRAY = ["Rotate", "Scale"];
 const RENDER_ITEM = {
-  Class: <ClassSelector />,
-  Elemet: <ElementSelector />,
-  Id: <IdSelector />,
-  Attribute: <AttributeSelector />,
-  Default: <ClassSelector />,
+  Rotate: <Rotate />,
+  Scale: <Scale />,
+  Rotate: <Rotate />,
 };
-const CssSelectors = () => {
-  const [demo, setDemo] = useState("Class");
+
+const Transforms = () => {
+  const [demo, setDemo] = useState("Rotate");
+
   return (
     <div className="app_wrapper">
       <div className="wrapper_top">
@@ -41,4 +39,4 @@ const CssSelectors = () => {
   );
 };
 
-export default CssSelectors;
+export default Transforms;

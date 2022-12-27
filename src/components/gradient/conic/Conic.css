@@ -1,0 +1,35 @@
+/*
+background-image: conic-gradient([from angle] [at position,] color [degree], color [degree], ...);
+By default, angle is 0deg and position is center.
+If no degree is specified, the colors will be spread equally around the center point.
+*/
+
+.conic {
+  width: 300px;
+  height: 120px;
+  padding: 5px;
+  margin: 15px auto;
+  --color1: red;
+  --color2: yellow;
+  --color3: green;
+}
+
+/*Default conic gradient*/
+#default {
+  background-image: conic-gradient(
+    var(--color1),
+    var(--color2),
+    var(--color3),
+    var(--color1)
+  );
+}
+
+/*Degree's conic gradient*/
+#degree {
+  background-image: conic-gradient(
+    var(--color1) 10deg,
+    var(--color2) 130deg,
+    var(--color3) 200deg,
+    var(--color1) 360deg
+  );
+}

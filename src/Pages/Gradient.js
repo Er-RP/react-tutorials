@@ -1,20 +1,17 @@
 import { useState } from "react";
-import AttributeSelector from "../components/selectors/AttributeSelector";
-import ClassSelector from "../components/selectors/ClassSelector";
-import ElementSelector from "../components/selectors/ElementSelector";
-import IdSelector from "../components/selectors/IdSelector";
-
-const SELECTOR_ARRAY = ["Class", "Elemet", "Id", "Attribute"];
-
+import Conic from "../components/gradient/conic/Index";
+import Linear from "../components/gradient/linear";
+import Radial from "../components/gradient/radial";
+const SELECTOR_ARRAY = ["Linear", "Radial", "Conic"];
 const RENDER_ITEM = {
-  Class: <ClassSelector />,
-  Elemet: <ElementSelector />,
-  Id: <IdSelector />,
-  Attribute: <AttributeSelector />,
-  Default: <ClassSelector />,
+  Linear: <Linear />,
+  Radial: <Radial />,
+  Conic: <Conic />,
+  Default: <Linear />,
 };
-const CssSelectors = () => {
-  const [demo, setDemo] = useState("Class");
+const Gradient = () => {
+  const [demo, setDemo] = useState("Linear");
+
   return (
     <div className="app_wrapper">
       <div className="wrapper_top">
@@ -41,4 +38,4 @@ const CssSelectors = () => {
   );
 };
 
-export default CssSelectors;
+export default Gradient;

@@ -1,0 +1,9 @@
+/*Rotating elements in two dimensional -  most prefereed method*/
+#rotate2d {
+  transform: rotate(90deg);
+}
+
+/*Rotating elements in two dimensional*/
+#rotate3d {
+  transform: rotate3d(1, -1, -1, 40deg);
+}

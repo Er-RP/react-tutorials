@@ -1,0 +1,6 @@
+#scale2d1 {
+  transform: scale(1.25);
+}
+#scale2d2 {
+  transform: scale(2, 0.75);
+}

@@ -1,0 +1,45 @@
+/* Commion styles for linear div*/
+.linear {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding: 5px;
+  margin: 15px;
+  --color1: rgb(207, 222, 121);
+  --color2: rgb(244, 68, 68);
+}
+
+/*Default linear gradient works from top to bottom*/
+#linear_top_to_bottom {
+  background-image: linear-gradient(var(--color1), var(--color2));
+}
+
+/*Changing the gradient direction using 'to' property*/
+#linear_rtl {
+  background-image: linear-gradient(to right, var(--color1), var(--color2));
+}
+
+/*Changing the gradient direction using 'to' with two direction property*/
+#linear_diagonal {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color1),
+    var(--color2)
+  );
+}
+
+/*Changing the gradient direction using 'Angle'*/
+#linear_angle {
+  background-image: linear-gradient(55deg, var(--color1), var(--color2));
+}
+
+/*Multiple Color gradient*/
+#linear_multiple {
+  background-image: linear-gradient(
+    30deg,
+    var(--color1),
+    var(--color2),
+    violet,
+    greenyellow
+  );
+}
